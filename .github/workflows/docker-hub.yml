@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Test the Docker image
-        run: docker run cs333finalproject fec3ab3047889c57829af0a7373453a78a5f8342b8e5a67f5fbcfa61c04411cc
+        run: docker run cs333finalproject:latest
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
