@@ -29,6 +29,11 @@ class Recipe:
         for label in self.ingredients:
             if label in self.ingredients:
                 return True
+    
+    def get_ingredient_by_label(self, label):
+        for ingredient in self.ingredients:
+            if label in self.ingredients:
+                return ingredient
 
     def get_label_amount(self, label):
         for ingredients in self.ingredients:

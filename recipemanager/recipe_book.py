@@ -15,6 +15,9 @@ class RecipeBook:
         for recipe in self.recipes:
             if name in recipe.name:
                 return recipe
+    
+    def get_name_of_recipe(self, recipe: Recipe):
+        return recipe.name
 
     def get_recipes_by_time(self, requested_time):
         recipes_by_time = [recipe for recipe in self.recipes if
