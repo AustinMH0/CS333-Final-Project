@@ -40,8 +40,31 @@ def remove_ingredients(recipe: Recipe):
         recipe.remove_all_ingredients()
 
 def view_recipe_book(recipe_book: RecipeBook):
-    print("------Viewing Recipe Book------")
-    print(recipe_book)
+    recipe_book_size = str(recipe_book.get_recipe_book_size())
+    print("------Recipe Book------")
+    print("You have " + recipe_book_size + " recipes.")
+    print("(1) View recipe book                 (2) View recipes by time")
+    print("(3) View recipes by ingredients      (4) Sort recipes by time")
+    choice = input("Choose an option: ")
+
+    if choice == "1":
+         print("------Viewing Recipe Book------")
+         print(recipe_book)
+    elif choice == "2":
+         time_input = int(input("Enter a time value in minutes: "))
+         recipes_by_time = recipe_book.get_recipes_by_time(time_input)
+         print("------Viewing Recipes that are " + str(time_input) + " Minutes or Less------")
+         print(recipes_by_time)
+    elif choice == "3":
+         ingredient_input = input("Enter an ingredient: ")
+         recipes_by_ingredient = recipe_book.get_recipes_by_ingredients(ingredient_input)
+         print("------Viewing Recipes that contain " + ingredient_input + "------")
+         print(recipes_by_ingredient)
+    elif choice == "4":
+         print("------Sorting Recipes by Time------")
+         sorted_recipes = recipe_book.sort_recipes_by_time()
+         print(sorted_recipes)        
+    
 
 def modify_recipe(recipe_book: RecipeBook):
     input_recipe_name = input("Enter the name of the recipe you would like to modify: ")
@@ -90,7 +113,7 @@ def main():
             print(choice)
              
         print('\n')
-        
+
 
 if __name__=="__main__": 
     main() 
