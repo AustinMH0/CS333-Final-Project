@@ -4,7 +4,7 @@ def welcome_screen():
         print("------ Welcome to the Recipe Manager ------")
         print("(1) Add Recipe       (2) View Recipe Book")
         print("(3) Modify Recipe    (4) Remove Recipe")
-        choice = input("Choose an option")
+        choice = input("Choose an option: ")
         return choice
 
 def create_recipe():
@@ -18,23 +18,26 @@ def create_recipe():
 
 def create_ingredients(recipe: Recipe):
         ingredient_count = int(input("How many ingredients does this recipe have? "))
-        for i in range(ingredient_count):
+        for _ in range(ingredient_count):
             ingredient_label = input("Ingredient label: ")
             ingredient_amount = input("Ingredient amount: ")
             ingredients = {Ingredient(ingredient_label, ingredient_amount)}
             recipe.add_multiple_ingredients(ingredients)
 
 def remove_ingredients(recipe: Recipe):
-    choice = input("(1) Remove a single ingredient     (2) Remove all ingredients")
+    print("------Current Ingredients------")
+    recipe.print_ingredients()
+    choice = input("(1) Remove a single ingredient     (2) Remove all ingredients\n")
      
     if choice == '1':
         ingredient_input = input("Enter ingredient label: ")
         ingredient_to_remove = recipe.get_ingredient_by_label(ingredient_input)
-        print("Removing: " + ingredient_to_remove)
+        ingredient_label = recipe.get_recipe_label(ingredient_to_remove)
+        print("Removing: " + ingredient_label)
         recipe.remove_ingredient(ingredient_to_remove)
     elif choice == '2':
-         print("Removing all ingredients...")
-         recipe.remove_all_ingredients()
+        print("Removing all ingredients...")
+        recipe.remove_all_ingredients()
 
 def view_recipe_book(recipe_book: RecipeBook):
     print("------Viewing Recipe Book------")
@@ -50,7 +53,7 @@ def modify_recipe(recipe_book: RecipeBook):
     if choice == '1':
         create_ingredients(recipe_to_modify)
     elif choice == '2':
-         remove_ingredients(recipe_to_modify)
+        remove_ingredients(recipe_to_modify)
 
 def remove_recipe(recipe_book: RecipeBook):
     input_recipe_name = input("Enter the name of the recipe you would like to remove: ")
@@ -84,17 +87,10 @@ def main():
             remove_recipe(recipe_book)
         
         elif choice == 'quit':
-             print(choice)
+            print(choice)
              
         print('\n')
-
-
-
-        # user_continue = input("Continue? Y/N: ")
-        # if user_continue == 'N' or 'n':
-        #     is_input = False
-        # elif user_continue == 'Y' or 'y':
-        #     is_input = True  
+        
 
 if __name__=="__main__": 
     main() 
