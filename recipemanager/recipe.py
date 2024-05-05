@@ -56,13 +56,22 @@ class Recipe:
     def print_ingredients(self):
         for ingredient in self.ingredients:
             print(ingredient)
+    
+    def format_ingredients(self):
+        ingredients = str(self.ingredients)[1:-1]
+        # ingredients = ingredients.replace(', ', '\n')
+        ingredients = ingredients.lstrip()
+        return ingredients
+
 
     def __str__(self):
+        ingredients = self.format_ingredients()
         return (f'Recipe: {self.name}\nPrep Time: {self.prep_time}\nCook Time: {self.cook_time}\nTotal Time: '
                 f'{self.total_time} \nServings: '
-                f'{self.servings}\n {self.print_ingredients()}')
+                f'{self.servings}\n---Ingredients---\n{ingredients}\n')
 
     def __repr__(self):
+        ingredients = self.format_ingredients()
         return (f'Recipe: {self.name}\nPrep Time: {self.prep_time}\nCook Time: {self.cook_time}\nTotal Time: '
                 f'{self.total_time} \nServings: '
-                f'{self.servings}\n {self.print_ingredients()}')
+                f'{self.servings}\n---Ingredients---\n{ingredients}\n')

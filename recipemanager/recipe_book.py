@@ -24,8 +24,6 @@ class RecipeBook:
                            recipe.total_time <= requested_time]
 
         return recipes_by_time
-        # for recipe in recipes_by_time:
-        #     return recipe.name
 
     def get_recipes_by_ingredients(self, ingredient_label):
         recipes_by_ingredients = [recipe for recipe in self.recipes if

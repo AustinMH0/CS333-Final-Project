@@ -46,23 +46,28 @@ def view_recipe_book(recipe_book: RecipeBook):
     print("(1) View recipe book                 (2) View recipes by time")
     print("(3) View recipes by ingredients      (4) Sort recipes by time")
     choice = input("Choose an option: ")
+    print('\n')
 
     if choice == "1":
          print("------Viewing Recipe Book------")
+         print('\n')
          print(recipe_book)
     elif choice == "2":
          time_input = int(input("Enter a time value in minutes: "))
          recipes_by_time = recipe_book.get_recipes_by_time(time_input)
          print("------Viewing Recipes that are " + str(time_input) + " Minutes or Less------")
+         recipes_by_time = format_list(recipes_by_time)
          print(recipes_by_time)
     elif choice == "3":
          ingredient_input = input("Enter an ingredient: ")
          recipes_by_ingredient = recipe_book.get_recipes_by_ingredients(ingredient_input)
          print("------Viewing Recipes that contain " + ingredient_input + "------")
+         recipes_by_ingredient = format_list(recipes_by_ingredient)
          print(recipes_by_ingredient)
     elif choice == "4":
          print("------Sorting Recipes by Time------")
          sorted_recipes = recipe_book.sort_recipes_by_time()
+         sorted_recipes = format_list(sorted_recipes)
          print(sorted_recipes)        
     
 
@@ -84,6 +89,11 @@ def remove_recipe(recipe_book: RecipeBook):
     recipe_name = recipe_book.get_name_of_recipe(recipe_to_remove)
     print("Removing: " + recipe_name)
     recipe_book.remove_recipe(recipe_to_remove)
+
+def format_list(list_to_format):
+    formatted_list = str(list_to_format)[1:-1]
+    formatted_list = formatted_list.replace(', ', '\n')
+    return formatted_list
 
 
 def main():
