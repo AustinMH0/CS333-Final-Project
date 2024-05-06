@@ -22,8 +22,8 @@ Using `Python 3.12.1`
 1) Clone the repo: `git clone https://github.com/AustinMH0/CS333-Final-Project`
 2) Install Coverage: `python3 -m pip install coverage`
 
-`coverage run -m main_tests` to run the unittests and integration tests.
-`python3 recipe_manager_app.py` to run the driver.
+- `coverage run -m main_tests` to run the unittests and integration tests.
+- `python3 recipe_manager_app.py` to run the driver.
 
 ### Docker Repsitory
 [Here](https://hub.docker.com/repository/docker/austinmh/cs333finalproject/general) is the Docker repository that the image is automatically pushed to via Actions.
