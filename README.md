@@ -13,8 +13,7 @@ The goal of this project is to:
 - [recipemanager package](recipemanager)
 
 #### Latest Coverage Report
-![image]<img src="[ur](https://github.com/AustinMH0/CS333-Final-Project/assets/112452064/aa0f91ef-daba-42aa-8913-1439eb36d3f9)l" alt="alt text" width="200" height="400">
-![image](https://github.com/AustinMH0/CS333-Final-Project/assets/112452064/aa0f91ef-daba-42aa-8913-1439eb36d3f9)
+<img src="https://github.com/AustinMH0/CS333-Final-Project/assets/112452064/1bff7651-4a7e-4a6d-b0cb-08de78de6311" width="50%" height="50%">
 
 
 ### Workflows
