@@ -26,10 +26,13 @@ class TestRecipe(unittest.TestCase):
     def test_remove_ingredient(self):
         self.grilled_cheese.add_ingredient(self.new_ingredient)
         # self.grilled_cheese.print_ingredients()
-        self.grilled_cheese.remove_ingredient(self.new_ingredient)
+        self.a_ingredient = Ingredient('meat', '1')
+        self.grilled_cheese.add_ingredient(self.a_ingredient)
+        remove = self.grilled_cheese.get_ingredient_by_label('meat')
+        self.grilled_cheese.remove_ingredient(remove)
         # print('\n')
         # self.grilled_cheese.print_ingredients()
-        self.assertEqual(4, self.grilled_cheese.ingredient_size())
+        self.assertEqual(5, self.grilled_cheese.ingredient_size())
 
     def test_remove_all_ingredients(self):
         self.grilled_cheese.remove_all_ingredients()
