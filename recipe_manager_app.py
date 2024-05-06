@@ -1,4 +1,5 @@
 from recipemanager import *
+import os
 
 def welcome_screen():
         print("------ Welcome to the Recipe Manager ------")
@@ -97,7 +98,7 @@ def format_list(list_to_format):
 
 
 def main():
-
+    os.system('cls')
     recipe_book = RecipeBook()
 
     choice = ""
