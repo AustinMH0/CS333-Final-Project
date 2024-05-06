@@ -12,6 +12,10 @@ The goal of this project is to:
 - [Unittests and integrations tests](tests)
 - [recipemanager package](recipemanager)
 
+#### Latest Coverage Report
+![image](https://github.com/AustinMH0/CS333-Final-Project/assets/112452064/aa0f91ef-daba-42aa-8913-1439eb36d3f9)
+
+
 ### Workflows
 [Workflow for automatic testing.](https://github.com/AustinMH0/CS333-Final-Project/actions/workflows/python-app.yml)
 [Workflow for automatic building and deployment.](https://github.com/AustinMH0/CS333-Final-Project/actions/workflows/docker-hub.yml)
