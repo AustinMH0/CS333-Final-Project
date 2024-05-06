@@ -17,8 +17,8 @@ The goal of this project is to:
 
 
 ### Workflows
-[Workflow for automatic testing.](https://github.com/AustinMH0/CS333-Final-Project/actions/workflows/python-app.yml)
-[Workflow for automatic building and deployment.](https://github.com/AustinMH0/CS333-Final-Project/actions/workflows/docker-hub.yml)
+- [Workflow for automatic testing.](https://github.com/AustinMH0/CS333-Final-Project/actions/workflows/python-app.yml)
+- [Workflow for automatic building and deployment.](https://github.com/AustinMH0/CS333-Final-Project/actions/workflows/docker-hub.yml)
 
 
 ### Installation
