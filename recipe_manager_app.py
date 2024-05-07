@@ -101,6 +101,8 @@ def main():
     os.system('clear')
     recipe_book = RecipeBook()
 
+    # Comment for video
+
     choice = ""
 
     while choice != 'quit':
