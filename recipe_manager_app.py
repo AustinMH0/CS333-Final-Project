@@ -98,7 +98,7 @@ def format_list(list_to_format):
 
 
 def main():
-    os.system('cls')
+    os.system('clear')
     recipe_book = RecipeBook()
 
     choice = ""
